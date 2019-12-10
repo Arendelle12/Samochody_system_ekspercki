@@ -104,11 +104,320 @@ rule "More archaic"
 end
 
 //2nd path
-//TODO
+rule "I guess I'm making some kind of statement about something"
+	when 
+		q: Question_and_Answer(question=="Why do you want a classic?" && answer=="I guess I'm making some kind of statement about something")
+	then
+		 Object[] possibleValues = { "I'm really rich, but like to pretend I'm still hippie",
+		 							 "I run an nyc-themed diner in Las Vegas",
+		 							 "The mothership left me in Paris",
+		 							 "I live dangerously and nader can suck it",
+		 							 "I'm kook. An american kook",
+		 							 "I take driving seriously and have the gloves to prove it",
+		 							 "My wallet is on a chain",
+		 							 "I'm a refugee from an alternate future with zeppelins and shit",
+		 							 "I hate people knowing what I drive",
+		 							 "I wanted a motocycle but I have no balance",
+		 							 "I like being part of a massive automotive subculture",
+		 							 "I will only drive vehicles with two distinct luggage areas"};
+		 Object selectedValue = JOptionPane.showInputDialog(null,"Great, what statement? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("Great, what statement?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "I'm really rich, but like to pretend I'm still hippie"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I'm really rich, but like to pretend I'm still hippie")
+	then
+		JOptionPane.showInternalMessageDialog(null, "VW TYPE2 MICROBUS", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I run an nyc-themed diner in Las Vegas"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I run an nyc-themed diner in Las Vegas")
+	then
+		JOptionPane.showInternalMessageDialog(null, "CHECKER MARATHON", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "The mothership left me in Paris"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="The mothership left me in Paris")
+	then
+		JOptionPane.showInternalMessageDialog(null, "CITROEN SM", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I live dangerously and nader can suck it"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I live dangerously and nader can suck it")
+	then
+		JOptionPane.showInternalMessageDialog(null, "CHEVY CORVAIR", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I'm kook. An american kook"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I'm kook. An american kook")
+	then
+		JOptionPane.showInternalMessageDialog(null, "AMC PACER, AMC GREMLIN, AMC AMX", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I take driving seriously and have the gloves to prove it"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I take driving seriously and have the gloves to prove it")
+	then
+		JOptionPane.showInternalMessageDialog(null, "BMW E30, PORSHE 911", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "My wallet is on a chain"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="My wallet is on a chain")
+	then
+		Object[] possibleValues = { "Yes",
+									"Not for style, I'm tired of losing it"};
+        Object selectedValue = JOptionPane.showInputDialog(null,"Are you here for style? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("Are you here for style?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "Yes_2"
+	when
+		q: Question_and_Answer(question=="Are you here for style?" && answer=="Yes")
+	then
+		JOptionPane.showInternalMessageDialog(null, "FORD FALCON, PLYMOUTH VALIANT", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Not for style, I'm tired of losing it"
+	when
+		q: Question_and_Answer(question=="Are you here for style?" && answer=="Not for style, I'm tired of losing it")
+	then
+		JOptionPane.showInternalMessageDialog(null, "RAMBLER AMERICAN", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I'm a refugee from an alternate future with zeppelins and shit"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I'm a refugee from an alternate future with zeppelins and shit")
+	then
+		JOptionPane.showInternalMessageDialog(null, "TATRA T87", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I hate people knowing what I drive"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I hate people knowing what I drive")
+	then
+		JOptionPane.showInternalMessageDialog(null, "STERLING 825, MITSUBISHI STARION, ISUZU I-MARK", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I wanted a motocycle but I have no balance"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I wanted a motocycle but I have no balance")
+	then
+		JOptionPane.showInternalMessageDialog(null, "LOTUS 7", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I like being part of a massive automotive subculture"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I like being part of a massive automotive subculture")
+	then
+		JOptionPane.showInternalMessageDialog(null, "VW BETTLE, MGB, DATSUN 240Z, VOLVO 240 ", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "I will only drive vehicles with two distinct luggage areas"
+	when
+		q: Question_and_Answer(question=="Great, what statement?" && answer=="I will only drive vehicles with two distinct luggage areas")
+	then
+		Object[] possibleValues = { "No",
+									"Yes"};
+        Object selectedValue = JOptionPane.showInputDialog(null,"Something faster than VW TYPE III? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("Something faster than VW TYPE III?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "No"
+	when 
+		q: Question_and_Answer(question=="Something faster than VW TYPE III?" && answer=="No")
+	then
+		JOptionPane.showInternalMessageDialog(null, "VW TYPE III", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Yes_3"
+	when 
+		q: Question_and_Answer(question=="Something faster than VW TYPE III?" && answer=="Yes")
+	then
+		Object[] possibleValues = { "No",
+									"Yes"};
+        Object selectedValue = JOptionPane.showInputDialog(null,"Something faster than PORSHE 914? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("Something faster than PORSHE 914?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "No_1"
+	when 
+		q: Question_and_Answer(question=="Something faster than PORSHE 914?" && answer=="No")
+	then
+		JOptionPane.showInternalMessageDialog(null, "PORSHE 914", "information",JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Yes_4"
+	when 
+		q: Question_and_Answer(question=="Something faster than PORSHE 914?" && answer=="Yes")
+	then
+		JOptionPane.showInternalMessageDialog(null, "DE TOMASO MANGUSTA", "information",JOptionPane.INFORMATION_MESSAGE);
+end
 
 //3rd path
-//TODO
+rule "New cars have no soul"
+	when
+		q: Question_and_Answer(question=="Why do you want a classic?" && answer=="New cars have no soul")
+	then 
+		Object[] possibleValues = { "Easy: ability to drive off a pier into an estuary",
+									"Synonym for weird",
+									"Soul means the car had an honest job like cop or cabbie",
+									"It means the car is often starring in movies",
+									"It could mean a pure evil?",
+									"Soul is the spirits of 43 dead clowns haunting the car",
+									"Soul is the ability to go a million miles with su carbs and lucas electrics",
+									"Technically novel",
+									"It means riding in it is like sitting on the sofa"};
+		Object selectedValue = JOptionPane.showInputDialog(null,"What does soul mean to you? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("What does soul mean to you?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
 
+rule "Easy: ability to drive off a pier into an estuary"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Easy: ability to drive off a pier into an estuary")
+	then
+		JOptionPane.showInternalMessageDialog(null, "AMPHICAR","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Synonym for weird"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Synonym for weird")
+	then
+		JOptionPane.showInternalMessageDialog(null, "BMW ISETTA, SUBARU 360, MESSERSCHMIDT KABINROLLER","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Soul means the car had an honest job like cop or cabbie"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Soul means the car had an honest job like cop or cabbie")
+	then
+		JOptionPane.showInternalMessageDialog(null, "DODGE MONACO, CHEVY CAPRICE, FORD CROWN VIC","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "It means the car is often starring in movies"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="It means the car is often starring in movies")
+	then
+		JOptionPane.showInternalMessageDialog(null, "VW BETTLE, DELOREAN DMC-12","information", JOptionPane.INFORMATION_MESSAGE);
+end
+	
+rule "It could mean a pure evil?"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="It could mean a pure evil?")
+	then
+		JOptionPane.showInternalMessageDialog(null, "PLYMOUTH FURY, BUICK GNX","information", JOptionPane.INFORMATION_MESSAGE);
+end
+	
+rule "Soul is the spirits of 43 dead clowns haunting the car"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Soul is the spirits of 43 dead clowns haunting the car")
+	then
+		JOptionPane.showInternalMessageDialog(null, "NASH METROPOLITAN","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Soul is the ability to go a million miles with su carbs and lucas electrics"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Soul is the ability to go a million miles with su carbs and lucas electrics")
+	then
+		JOptionPane.showInternalMessageDialog(null, "VOLVO P1800","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Technically novel"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="Technically novel")
+	then
+		Object[] possibleValues = { "They thought they were building a plane",
+									"Instead of pistons some metal hamantaschen",
+									"Can burn cooking oil",
+									"Engine in the wrong place (maybe cooled by wrong stuff)"};
+		Object selectedValue = JOptionPane.showInputDialog(null,"Like what? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("Like what?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "They thought they were building a plane"
+	when
+		q: Question_and_Answer(question=="Like what?" && answer=="They thought they were building a plane")
+	then
+		JOptionPane.showInternalMessageDialog(null, "SAAB 96","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Instead of pistons some metal hamantaschen"
+	when
+		q: Question_and_Answer(question=="Like what?" && answer=="Instead of pistons some metal hamantaschen")
+	then
+		JOptionPane.showInternalMessageDialog(null, "MAZDA RX-7","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Can burn cooking oil"
+	when
+		q: Question_and_Answer(question=="Like what?" && answer=="Can burn cooking oil")
+	then
+		JOptionPane.showInternalMessageDialog(null, "MERCEDES BENZ 300TD","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Engine in the wrong place (maybe cooled by wrong stuff)"
+	when
+		q: Question_and_Answer(question=="Like what?" && answer=="Engine in the wrong place (maybe cooled by wrong stuff)")
+	then
+		JOptionPane.showInternalMessageDialog(null, "PORSHE 912, RENAULT ALPINE","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "It means riding in it is like sitting on the sofa"
+	when
+		q: Question_and_Answer(question=="What does soul mean to you?" && answer=="It means riding in it is like sitting on the sofa")
+	then
+		Object[] possibleValues = { "No",
+									"Yes"};
+        Object selectedValue = JOptionPane.showInputDialog(null,"A huge, fast FWD sofa? Choose one",
+								 "Input",JOptionPane.INFORMATION_MESSAGE, null,possibleValues, possibleValues[0]);
+		Question_and_Answer q1=new Question_and_Answer();
+		q1.setQuestion("A huge, fast FWD sofa?");
+		q1.setAnswer(selectedValue.toString());
+		insert(q1);
+end
+
+rule "No_2"
+	when
+		q: Question_and_Answer(question=="A huge, fast FWD sofa?" && answer=="No")
+	then
+		JOptionPane.showInternalMessageDialog(null, "LINCOLN TOWN CAR","information", JOptionPane.INFORMATION_MESSAGE);
+end
+
+rule "Yes_5"
+	when
+		q: Question_and_Answer(question=="A huge, fast FWD sofa?" && answer=="Yes")
+	then
+		JOptionPane.showInternalMessageDialog(null, "OLDS TORNADO","information", JOptionPane.INFORMATION_MESSAGE);
+end	
+	
 //4th path
 rule "I prefer the style"
 	when
