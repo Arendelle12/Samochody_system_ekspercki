@@ -1,4 +1,4 @@
-package com.rules_samochody;
+package com.sample;
 
 import org.kie.api.KieServices;
 import org.kie.api.runtime.KieContainer;

@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="Samochody_system_ekspercki/src/main/java"/>
-	<classpathentry kind="lib" path="C:/Users/Gabi/Downloads/drools/drools-distribution-7.3.0.Final/binaries/kie-api-7.3.0.Final.jar" sourcepath="C:/Users/Gabi/Downloads/drools/drools-distribution-7.3.0.Final/binaries/kie-api-7.3.0.Final.jar"/>
-	<classpathentry kind="output" path="Samochody_system_ekspercki/target/classes"/>
-</classpath>
